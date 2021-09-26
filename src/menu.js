@@ -2,7 +2,7 @@ import _ from 'lodash';
 import './style.css';
 import Background from './rise_brew_bg.png';
 
-function component() {
+function addMenuPage() {
   const element = document.createElement('div');
 	const nav = document.createElement('nav');
 	const bodyContent = document.createElement('div');
@@ -24,4 +24,4 @@ function component() {
   return element;
 }
 
-document.body.appendChild(component());
+document.body.appendChild(addMenuPage());
