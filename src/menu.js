@@ -21,3 +21,4 @@ function menuPage() {
   containerDiv.appendChild(element);
 }
 
+export { menuPage }
