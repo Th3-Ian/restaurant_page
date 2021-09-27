@@ -14,8 +14,6 @@ const navBar = () => {
 
   // Lodash, now imported by this script
 	const navItems = ['Home', 'Menu', 'Contact'];
-	nav.innerHTML = '<a class="tab home-page">Home</a><a class="tab menu-page">Menu</a><a class="tab contact-page">Contact</a>';
-
 	div.appendChild(nav);
 
 	containerDiv.appendChild(div);
@@ -25,16 +23,25 @@ const navBar = () => {
 		let navBtn = String(item);
 		const anchor = document.createElement('a');
 		anchor.innerHTML = `${navBtn}`;
-		anchor.classList.add(`${navBtn.toLowerCase()}-page`);
+		anchor.classList.add(`${navBtn.toLowerCase()}-page`, 'tab');
 		nav.appendChild(anchor);
 	});
 
+	document.querySelectorAll('.tab').forEach(item => {
+		item.addEventListener('click', helloFunc);
+	})
+
+	function helloFunc(){
+		console.log('hello Function');
+	}
 	//CREATE 2nd FOR EACH FUNC TO ADD EVENT LISTENER TO NAV ITEMS
 	/*
-  nav.addEventListener('click', helloClick);
-
-	function helloClick() {
-		console.log('hello this click works');
+	function changeTab() {
+		if (document.classList.contains('home-page')){
+			console.log('HOMEPAGE BUTTON');
+		} else if (document.classList.contains('menu-page')) {
+			console.log('')
+		}
 	}
 	*/
 }
