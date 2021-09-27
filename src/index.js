@@ -27,13 +27,7 @@ const navBar = () => {
 		nav.appendChild(anchor);
 	});
 
-	document.querySelectorAll('.tab').forEach(item => {
-		item.addEventListener('click', helloFunc);
-	})
 
-	function helloFunc(){
-		console.log('hello Function');
-	}
 	//CREATE 2nd FOR EACH FUNC TO ADD EVENT LISTENER TO NAV ITEMS
 	/*
 	function changeTab() {
@@ -42,6 +36,34 @@ const navBar = () => {
 		} else if (document.classList.contains('menu-page')) {
 			console.log('')
 		}
+	}
+	*/
+}
+
+addGlobalEventListener('click', '.tab', e => {
+	helloFunc(e);
+})
+
+/*
+document.querySelectorAll('.tab').forEach(item => {
+	item.addEventListener('click',  helloFunc());
+})
+*/
+function addGlobalEventListener(type, selector, callback) {
+	document.addEventListener(type, e => {
+		if (e.target.matches(selector)) callback(e)
+	})
+}
+
+function helloFunc(e){
+	console.log(e);
+	/*
+	if(item.classList.contains('home-page')) {
+		console.log('HOMEPAGE');
+	} else if (item.classList.contains('menu-page')) {
+		console.log('MENUPAGE');
+	} else {
+		console.log('hello Function');
 	}
 	*/
 }
