@@ -14,7 +14,7 @@ const homePage = () => {
 	//element.classAdd('header-img');
 	//const myBackground = new Image();
   //myBackground.src = Background;
-
+	element.setAttribute('id', 'container')
 	element.appendChild(bgDiv);
 	element.appendChild(bodyContent);
 

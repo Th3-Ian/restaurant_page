@@ -41,31 +41,30 @@ const navBar = () => {
 }
 
 addGlobalEventListener('click', '.tab', e => {
-	helloFunc(e);
+	changeTab(e);
 })
 
-/*
-document.querySelectorAll('.tab').forEach(item => {
-	item.addEventListener('click',  helloFunc());
-})
-*/
 function addGlobalEventListener(type, selector, callback) {
 	document.addEventListener(type, e => {
 		if (e.target.matches(selector)) callback(e)
 	})
 }
 
-function helloFunc(e){
-	console.log(e);
-	/*
-	if(item.classList.contains('home-page')) {
+function changeTab(e){
+	let event = e.target;
+	console.log(e.target);
+
+	if(event.classList.contains('home-page')) {
 		console.log('HOMEPAGE');
-	} else if (item.classList.contains('menu-page')) {
+		clear();
+		homePage();
+	} else if (event.classList.contains('menu-page')) {
 		console.log('MENUPAGE');
+		clear();
+		menuPage();
 	} else {
 		console.log('hello Function');
 	}
-	*/
 }
 
 navBar();
