@@ -12,9 +12,9 @@ const navBar = () => {
 
 	div.appendChild(nav);
 
-
+	document.body.appendChild(div());
   return div;
 }
-//document.body.appendChild(navBar());
+//
 
 export {navBar}

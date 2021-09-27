@@ -1,13 +1,13 @@
 import _ from 'lodash';
 import './style.css';
-import Background from './rise_brew_bg.png';
-import homePage from './home'
-import navBar from './nav'
-import menuPage from './menu'
+//import Background from './rise_brew_bg.png';
+import { homePage } from './home'
+//import { navBar } from './nav'
+//import { menuPage } from './menu'
 
-navBar()
-homePage()
+homePage();
 
+/*
 document.addEventListener('tabContent', function(){
 	const tabs = document.getElementsByClassName('tab');
 	for(let i = 0; i < tabs.length; i++) {
@@ -26,5 +26,5 @@ document.addEventListener('tabContent', function(){
 		[index].classList.add('live-page');
 	}
 })
-
+*/
 //document.body.appendChild(component());
