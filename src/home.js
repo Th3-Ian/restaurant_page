@@ -15,8 +15,6 @@ const homePage = () => {
 	//const myBackground = new Image();
   //myBackground.src = Background;
 
-	console.log('this is working pt 2');
-
 	element.appendChild(bgDiv);
 	element.appendChild(bodyContent);
 

@@ -2,9 +2,11 @@ import _ from 'lodash';
 import './style.css';
 //import Background from './rise_brew_bg.png';
 import { homePage } from './home'
-//import { navBar } from './nav'
+import { navBar } from './nav';
+import { clear } from './clear'
 //import { menuPage } from './menu'
 
+navBar();
 homePage();
 
 /*
