@@ -2,9 +2,9 @@ import _ from 'lodash';
 import './style.css';
 //import Background from './rise_brew_bg.png';
 import { homePage } from './home'
-//import { navBar } from './nav';
 import { clear } from './clear'
 import { menuPage } from './menu'
+import { contactPage } from './contact'
 
 
 const navBar = () => {
@@ -62,8 +62,10 @@ function changeTab(e){
 		console.log('MENUPAGE');
 		clear();
 		menuPage();
-	} else {
-		console.log('hello Function');
+	} else if (event.classList.contains('contact-page')) {
+		console.log('CONTACTPAGE');
+		clear();
+		contactPage();
 	}
 }
 
